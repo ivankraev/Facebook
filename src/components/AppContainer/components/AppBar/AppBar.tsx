@@ -8,7 +8,7 @@ import LogoContainer from './components/LogoContainer'
 const AppBar: FC = () => {
   return (
     <AppBarComponent>
-      <Toolbar variant="dense">
+      <Toolbar variant="dense" sx={{ bgcolor: 'background.paper' }}>
         <LogoContainer />
         <MainContentNavigation />
         <UserProfileNavigation />

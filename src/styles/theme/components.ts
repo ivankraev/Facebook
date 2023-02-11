@@ -56,17 +56,7 @@ export const components: ThemeOptions['components'] = {
       disableRipple: true,
     },
   },
-  MuiDivider: {
-    defaultProps: {
-      variant: 'middle',
-    },
-    styleOverrides: {
-      root: {
-        borderBottomWidth: 2,
-        marginInline: 8,
-      },
-    },
-  },
+
   MuiListItem: {
     styleOverrides: {
       root: {
@@ -75,14 +65,19 @@ export const components: ThemeOptions['components'] = {
           padding: '0.5rem',
         },
         '.MuiListItemIcon-root': {
-          minWidth: '48px',
+          minWidth: 'unset',
+          marginRight: '0.75rem',
         },
         '.MuiListItemAvatar-root': {
-          minWidth: '48px',
+          minWidth: 'unset',
+          marginRight: '0.75rem',
         },
         '.MuiAvatar-root': {
-          width: '36px',
-          height: '36px',
+          width: '2.25rem',
+          height: '2.25rem',
+        },
+        '.MuiTypography-body1': {
+          marginTop: '4px',
         },
       },
     },

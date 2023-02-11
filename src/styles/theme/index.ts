@@ -7,9 +7,12 @@ export const themeOptions: ThemeOptions = {
   palette,
   components,
   typography,
+  transitions: {
+    create: () => 'none',
+  },
 }
 
-const theme: Theme = createTheme(themeOptions)
-const appTheme = responsiveFontSizes(theme)
+const darkTheme: Theme = createTheme(themeOptions)
+const darkAppTheme = responsiveFontSizes(darkTheme)
 
-export default appTheme
+export { darkAppTheme }
