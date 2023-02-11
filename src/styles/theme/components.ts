@@ -10,9 +10,9 @@ export const components: ThemeOptions['components'] = {
     },
     styleOverrides: {
       root: {
-        paddingInline: 32,
         display: 'flex',
         justifyContent: 'center',
+        paddingInline: 32,
       },
     },
   },
@@ -41,13 +41,13 @@ export const components: ThemeOptions['components'] = {
         width: DRAWER_WIDTH,
         height: `calc(100vh - ${APPBAR_HEIGHT}px)`,
         position: 'fixed',
-        top: APPBAR_HEIGHT,
         display: 'flex',
+        top: APPBAR_HEIGHT,
+        padding: '0.5rem',
         boxSizing: 'border-box',
         border: 'none',
         backgroundColor: 'unset',
         overflowY: 'auto',
-        padding: '0.5rem',
       },
     },
   },
@@ -56,7 +56,6 @@ export const components: ThemeOptions['components'] = {
       disableRipple: true,
     },
   },
-
   MuiListItem: {
     styleOverrides: {
       root: {
@@ -77,7 +76,7 @@ export const components: ThemeOptions['components'] = {
           height: '2.25rem',
         },
         '.MuiTypography-body1': {
-          marginTop: '4px',
+          marginTop: '0.25rem',
         },
       },
     },
