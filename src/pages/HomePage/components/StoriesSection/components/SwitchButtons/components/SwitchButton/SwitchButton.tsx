@@ -1,50 +1,47 @@
 import { FC } from 'react'
-import { Box } from '@mui/material'
+import { Box, styled } from '@mui/material'
 import { MovieFilter as ReelsIcon, MenuBook as StoriesIcon } from '@mui/icons-material'
 
-import { ISwitchItemConfigOptions } from './types'
+import { IReelsOrStories, ISwitchItemConfigOptions } from './types'
 import ListItem from '@/components/ListItems/ListItem'
 
-const listItemStyles = {
+const StyledListItem = styled(ListItem)(({ theme }) => ({
   '.MuiListItemText-root': {
     flex: 'unset',
   },
   '.MuiButtonBase-root': {
     justifyContent: 'center',
-    padding: '0.6rem',
-    color: 'secondary.main',
+    padding: theme.spacing(1.2),
+    color: theme.palette.text.secondary,
   },
   '.MuiListItemIcon-root': {
-    marginRight: '0.5rem',
+    marginRight: theme.spacing(1),
   },
-  '.Mui-selected:hover': {
+  '.Mui-selected:hover, .Mui-selected': {
     background: 'none',
+    color: theme.palette.primary.main,
   },
-  '.Mui-selected': {
-    background: 'none',
-    color: 'primary.main',
-  },
-} as const
+}))
 
 interface ISwitchButtonProps {
   onClick: () => void
-  active: 'reels' | 'stories'
-  type: 'reels' | 'stories'
+  active: IReelsOrStories
+  type: IReelsOrStories
 }
 
 const SwitchButton: FC<ISwitchButtonProps> = ({ onClick, active, type }) => {
   const config: ISwitchItemConfigOptions = {
     stories: {
+      borderColor: active === 'stories' ? 'primary.main' : 'background.paper',
       iconColor: active === 'stories' ? 'primary' : 'secondary',
       selected: active === 'stories',
-      borderColor: active === 'stories' ? 'primary.main' : 'background.paper',
       icon: StoriesIcon,
       label: 'Истории',
     },
     reels: {
+      borderColor: active === 'reels' ? 'primary.main' : 'background.paper',
       iconColor: active === 'reels' ? 'primary' : 'secondary',
       selected: active === 'reels',
-      borderColor: active === 'reels' ? 'primary.main' : 'background.paper',
       icon: ReelsIcon,
       label: 'Ленти',
     },
@@ -54,18 +51,17 @@ const SwitchButton: FC<ISwitchButtonProps> = ({ onClick, active, type }) => {
 
   return (
     <Box flex={1}>
-      <ListItem
+      <StyledListItem
         label={label}
         icon={icon}
         selected={selected}
-        sx={listItemStyles}
         onClick={onClick}
         iconProps={{
           color: iconColor,
           fontSize: 'medium',
         }}
       />
-      <Box width={'100%'} height={'3px'} bgcolor={borderColor} />
+      <Box height={'3px'} bgcolor={borderColor} />
     </Box>
   )
 }

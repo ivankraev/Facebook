@@ -1,10 +1,14 @@
 import { FC } from 'react'
-import { Box } from '@mui/material'
+import { Box, styled } from '@mui/material'
+
+const Wrapper = styled(Box)(({ theme }) => ({
+  borderRadius: theme.spacing(0, 0, 1, 1),
+  backgroundColor: theme.palette.background.paper,
+  height: '232px',
+}))
 
 const Stories: FC = () => {
-  return (
-    <Box sx={{ bgcolor: 'background.paper', height: '232px', borderRadius: '0px 0px 8px 8px' }} />
-  )
+  return <Wrapper />
 }
 
 export default Stories

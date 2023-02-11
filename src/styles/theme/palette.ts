@@ -9,7 +9,7 @@ const darkThemeColors = {
     main: '#2374e1',
   },
   graphite: {
-    main: '#B0B3B8',
+    main: '#b0b3b8',
   },
   text: { primary: '#E4E6EB', secondary: '#b0b3b8' },
 }

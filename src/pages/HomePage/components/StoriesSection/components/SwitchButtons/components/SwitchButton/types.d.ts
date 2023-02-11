@@ -1,7 +1,7 @@
 import { IconProps, SvgIcon } from '@mui/material/Icon'
 
 export type ISwitchItemConfigOptions = Record<
-  'stories' | 'reels',
+  IReelsOrStories,
   {
     iconColor: IconProps['color']
     selected: boolean
@@ -10,3 +10,5 @@ export type ISwitchItemConfigOptions = Record<
     label: string
   }
 >
+
+export type IReelsOrStories = 'reels' | 'stories'

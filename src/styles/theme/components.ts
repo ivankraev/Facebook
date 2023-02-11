@@ -63,11 +63,7 @@ export const components: ThemeOptions['components'] = {
           borderRadius: '8px',
           padding: '0.5rem',
         },
-        '.MuiListItemIcon-root': {
-          minWidth: 'unset',
-          marginRight: '0.75rem',
-        },
-        '.MuiListItemAvatar-root': {
+        '.MuiListItemIcon-root, .MuiListItemAvatar-root': {
           minWidth: 'unset',
           marginRight: '0.75rem',
         },
