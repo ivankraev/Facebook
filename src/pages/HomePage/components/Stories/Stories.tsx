@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 import { Box } from '@mui/material'
 import SwitchButtons from './components/SwitchButtons'
 
-const Stories = () => {
+const Stories: FC = () => {
   const [section, setSection] = useState<'stories' | 'reels'>('stories')
 
   const toggleStories = () => {

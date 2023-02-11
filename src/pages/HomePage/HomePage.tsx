@@ -1,6 +1,6 @@
+import { FC } from 'react'
 import SideBar from '@/components/AppContainer/components/SideBar'
 import { Box, Container, Drawer } from '@mui/material'
-import { FC } from 'react'
 import Stories from './components/Stories'
 
 const HomePage: FC = () => {

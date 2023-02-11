@@ -1,7 +1,6 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { Box } from '@mui/material'
 import { MovieFilter as ReelsIcon, MenuBook as StoriesIcon } from '@mui/icons-material'
-import { colors } from '@/styles/theme/palette'
 
 import { ISwitchItemConfigOptions } from './types'
 import ListItem from '@/components/ListItems/ListItem'
@@ -23,7 +22,7 @@ const listItemStyles = {
   },
   '.Mui-selected': {
     background: 'none',
-    color: colors.sierraBlue.main,
+    color: 'primary.main',
   },
 } as const
 

@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react'
+import { FC } from 'react'
 import {
   ListItemButton,
   ListItemIcon,
@@ -38,4 +38,4 @@ const ListItem: FC<IListItemProps> = ({
   )
 }
 
-export default memo(ListItem)
+export default ListItem

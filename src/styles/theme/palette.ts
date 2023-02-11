@@ -1,6 +1,6 @@
 import { ThemeOptions } from '@mui/material'
 
-export const colors = {
+const darkThemeColors = {
   midnight: {
     main: '#242526',
     dark: '#18191a',
@@ -14,20 +14,24 @@ export const colors = {
   text: { primary: '#E4E6EB', secondary: '#b0b3b8' },
 }
 
-export const palette: ThemeOptions['palette'] = {
+export const darkThemePalette: ThemeOptions['palette'] = {
   mode: 'dark',
   primary: {
-    main: colors.sierraBlue.main,
+    main: darkThemeColors.sierraBlue.main,
   },
   secondary: {
-    main: colors.graphite.main,
+    main: darkThemeColors.graphite.main,
   },
   text: {
-    primary: colors.text.primary,
-    secondary: colors.text.secondary,
+    primary: darkThemeColors.text.primary,
+    secondary: darkThemeColors.text.secondary,
   },
   background: {
-    default: colors.midnight.dark,
-    paper: colors.midnight.main,
+    default: darkThemeColors.midnight.dark,
+    paper: darkThemeColors.midnight.main,
   },
+}
+
+export const lightThemePalette: ThemeOptions['palette'] = {
+  mode: 'light',
 }

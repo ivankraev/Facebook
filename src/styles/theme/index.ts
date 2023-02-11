@@ -1,18 +1,18 @@
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from '@mui/material/styles'
-import { palette } from './palette'
+import { darkThemePalette, lightThemePalette } from './palette'
 import { components } from './components'
 import { typography } from './typography'
 
 export const themeOptions: ThemeOptions = {
-  palette,
   components,
   typography,
   transitions: {
     create: () => 'none',
   },
 }
-
-const darkTheme: Theme = createTheme(themeOptions)
+const lightTheme: Theme = createTheme({ ...themeOptions, palette: lightThemePalette })
+const darkTheme: Theme = createTheme({ ...themeOptions, palette: darkThemePalette })
 const darkAppTheme = responsiveFontSizes(darkTheme)
+const lightAppTheme = responsiveFontSizes(lightTheme)
 
-export { darkAppTheme }
+export { darkAppTheme, lightAppTheme }

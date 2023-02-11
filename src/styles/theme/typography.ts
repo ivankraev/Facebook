@@ -1,4 +1,5 @@
 import { ThemeOptions } from '@mui/material'
+
 export const typography: ThemeOptions['typography'] = {
   body1: {
     fontSize: '0.925rem',
