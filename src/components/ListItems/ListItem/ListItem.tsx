@@ -14,8 +14,8 @@ export interface IListItemProps {
   icon: typeof SvgIcon
   onClick?: () => void
   iconProps?: SvgIconProps
-  sx?: SxProps
   selected?: boolean
+  sx?: SxProps
 }
 
 const ListItem: FC<IListItemProps> = ({

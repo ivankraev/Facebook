@@ -1,8 +1,9 @@
 import { FC, useState } from 'react'
 import { Box } from '@mui/material'
 import SwitchButtons from './components/SwitchButtons'
+import Stories from './components/Stories'
 
-const Stories: FC = () => {
+const StoriesSection: FC = () => {
   const [section, setSection] = useState<'stories' | 'reels'>('stories')
 
   const toggleStories = () => {
@@ -20,8 +21,9 @@ const Stories: FC = () => {
   return (
     <Box sx={{ pt: '0.5rem' }}>
       <SwitchButtons active={section} toggleReels={toggleReels} toggleStories={toggleStories} />
+      <Stories />
     </Box>
   )
 }
 
-export default Stories
+export default StoriesSection
