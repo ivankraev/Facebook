@@ -6,9 +6,6 @@ import { typography } from './typography'
 export const themeOptions: ThemeOptions = {
   components,
   typography,
-  transitions: {
-    create: () => 'none',
-  },
 }
 const lightTheme: Theme = createTheme({ ...themeOptions, palette: lightThemePalette })
 const darkTheme: Theme = createTheme({ ...themeOptions, palette: darkThemePalette })

@@ -22,6 +22,10 @@ export default defineConfig({
         find: '@/styles',
         replacement: path.resolve(__dirname, 'src/styles'),
       },
+      {
+        find: '@/mocks',
+        replacement: path.resolve(__dirname, 'src/__mocks__'),
+      },
     ],
   },
 })

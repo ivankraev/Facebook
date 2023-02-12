@@ -20,7 +20,8 @@
       "@/components*": ["./src/components*"],
       "@/pages*": ["./src/pages*"],
       "@/routes*": ["./src/routes*"],
-      "@/styles*": ["./src/styles*"]
+      "@/styles*": ["./src/styles*"],
+      "@/mocks*": ["./src/__mocks__*"]
     }
   },
   "include": ["src"],

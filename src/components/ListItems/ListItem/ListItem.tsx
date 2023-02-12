@@ -10,20 +10,20 @@ import {
 } from '@mui/material'
 
 export interface IListItemProps {
-  label: string
   icon: typeof SvgIcon
-  onClick?: () => void
+  label?: string
   iconProps?: SvgIconProps
   selected?: boolean
+  onClick?: () => void
   sx?: SxProps
 }
 
 const ListItem: FC<IListItemProps> = ({
-  label,
   icon: Icon,
-  onClick,
+  label,
   iconProps,
   selected = false,
+  onClick,
   ...rest
 }) => {
   return (
@@ -32,7 +32,7 @@ const ListItem: FC<IListItemProps> = ({
         <ListItemIcon>
           <Icon {...iconProps} />
         </ListItemIcon>
-        <ListItemText primary={label} />
+        {label && <ListItemText primary={label} />}
       </ListItemButton>
     </ListItemComponent>
   )

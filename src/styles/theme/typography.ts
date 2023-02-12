@@ -6,5 +6,9 @@ export const typography: ThemeOptions['typography'] = {
     lineHeight: 1.375,
     fontWeight: 500,
   },
+  body2: {
+    fontSize: '0.825rem',
+    fontWeight: 600,
+  },
   button: { textTransform: 'initial' },
 }

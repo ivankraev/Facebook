@@ -5,7 +5,14 @@ import {
   ListItemButton,
   ListItemText,
   ListItemAvatar as ListItemAvatarComponent,
+  styled,
 } from '@mui/material'
+
+const ItemWrapper = styled(ListItem)(({ theme }) => ({
+  '.MuiListItemText-root': {
+    marginLeft: theme.spacing(1),
+  },
+}))
 
 export interface IListItemAvatarProps {
   src: string
@@ -14,14 +21,14 @@ export interface IListItemAvatarProps {
 
 const ListItemAvatar: FC<IListItemAvatarProps> = ({ src, label }) => {
   return (
-    <ListItem disablePadding>
+    <ItemWrapper disablePadding>
       <ListItemButton>
         <ListItemAvatarComponent>
           <Avatar src={src} />
         </ListItemAvatarComponent>
         <ListItemText primary={label} />
       </ListItemButton>
-    </ListItem>
+    </ItemWrapper>
   )
 }
 

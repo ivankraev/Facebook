@@ -1,12 +1,12 @@
 import { FC, useState } from 'react'
 import { Box, styled } from '@mui/material'
 
-import { IReelsOrStories } from './components/SwitchButtons/components/SwitchButton/types'
 import SwitchButtons from './components/SwitchButtons'
 import Stories from './components/Stories'
+import { IReelsOrStories } from './types'
 
 const Wrapper = styled(Box)(({ theme }) => ({
-  paddingTop: theme.spacing(0.5),
+  paddingTop: theme.spacing(3),
 }))
 
 const StoriesSection: FC = () => {
