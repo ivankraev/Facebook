@@ -1,13 +1,19 @@
 import { FC } from 'react'
-import { Drawer, List, Divider } from '@mui/material'
+import { Drawer, List, Divider, styled } from '@mui/material'
 
 import { listItems } from './config'
 import ListItemLink from '@/components/ListItems/ListItemLink'
 import ListItemAvatarLink from '@/components/ListItems/ListItemAvatarLink'
 
+const ResponsiveDrawer = styled(Drawer)(({ theme }) => ({
+  [theme.breakpoints.down('lg')]: {
+    display: 'none',
+  },
+}))
+
 const SideBar: FC = () => {
   return (
-    <Drawer variant="permanent" anchor={'left'}>
+    <ResponsiveDrawer variant="permanent" anchor={'left'}>
       <List>
         <ListItemAvatarLink src={'john-doe.jpg'} label={'John Doe'} link={'/'} />
         {listItems.map(({ label, link, icon }) => (
@@ -15,7 +21,7 @@ const SideBar: FC = () => {
         ))}
       </List>
       <Divider variant={'middle'} sx={{ borderBottomWidth: 2, marginInline: 1 }} />
-    </Drawer>
+    </ResponsiveDrawer>
   )
 }
 

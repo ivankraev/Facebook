@@ -6,7 +6,7 @@ import { IListItemProps } from '@/components/ListItems/ListItem/ListItem'
 
 const StyledListItem = styled(ListItem)(({ theme }) => ({
   '.MuiSvgIcon-root': {
-    color: theme.palette.secondary.main,
+    color: theme.palette.text.secondary,
   },
   '.MuiButtonBase-root': {
     justifyContent: 'center',
@@ -14,9 +14,9 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
   },
   '.MuiListItemText-root': {
     marginLeft: theme.spacing(1),
-    padding: 0,
   },
   '.Mui-selected:hover, .Mui-selected': {
+    transition: theme.transitions.create('background-color', { duration: 0 }),
     color: theme.palette.primary.main,
     '& .MuiSvgIcon-root': {
       color: theme.palette.primary.main,
@@ -25,7 +25,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
       content: '""',
       position: 'absolute',
       width: '100%',
-      height: '3px',
+      height: theme.spacing(0.375),
       bottom: -6,
       backgroundColor: theme.palette.primary.main,
       borderRadius: theme.spacing(0.2, 0.2, 0, 0),

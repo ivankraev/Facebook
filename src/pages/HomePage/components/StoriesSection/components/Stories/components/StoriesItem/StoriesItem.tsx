@@ -1,6 +1,8 @@
 import { FC } from 'react'
-import { styled, Box, Typography, Avatar } from '@mui/material'
+import { styled, Box, Typography, Avatar, Theme, useTheme } from '@mui/material'
+
 import { IStoriesItem } from '../StoriesSlider/StoriesSlider'
+import { userStatusIndicatorStyles } from '@/utils/user-status-indicator-styles'
 
 const ItemWrapper = styled(Box)(({ theme }) => ({
   width: theme.spacing(14),
@@ -10,7 +12,9 @@ const ItemWrapper = styled(Box)(({ theme }) => ({
   overflow: 'hidden',
 }))
 
-const ItemMetadataWrapper = styled(Box)(({ theme }) => ({
+const ItemMetadataWrapper = styled(Box, {
+  shouldForwardProp: (prop: string) => prop !== 'isOnline',
+})(({ theme, isOnline }: { theme: Theme; isOnline: boolean }) => ({
   display: 'flex',
   flexDirection: 'column',
   position: 'absolute',
@@ -18,6 +22,7 @@ const ItemMetadataWrapper = styled(Box)(({ theme }) => ({
   pointerEvents: 'none',
   padding: theme.spacing(1.5),
   inset: 0,
+  ...userStatusIndicatorStyles(isOnline, theme, 4.8),
 }))
 
 const ItemImage = styled('img')(({ theme }) => ({
@@ -45,10 +50,18 @@ interface IStoriesItemProps {
 }
 
 const StoriesItem: FC<IStoriesItemProps> = ({ item }) => {
+  console.log(item.id)
+
+  const theme = useTheme()
+
+  const onClick = () => {
+    console.log('opened item with id:', item.id)
+  }
+
   return (
-    <ItemWrapper>
+    <ItemWrapper onClick={onClick}>
       <ItemImage src={item.src} alt={''} />
-      <ItemMetadataWrapper>
+      <ItemMetadataWrapper isOnline={item.author.isOnline} theme={theme}>
         <AuthorImage src={item.author.profilePhotoSrc} alt={''} />
         <AuthorName variant={'body2'}>{item.author.name}</AuthorName>
       </ItemMetadataWrapper>

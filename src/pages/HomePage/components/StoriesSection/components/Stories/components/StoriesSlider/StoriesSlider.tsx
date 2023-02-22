@@ -1,11 +1,12 @@
 import { FC } from 'react'
-import { Box } from '@mui/material'
+import { Stack } from '@mui/material'
 
 import StoriesItem from '../StoriesItem'
 
 interface IUser {
   id: number
   name: string
+  isOnline: boolean
   profilePhotoSrc: string
 }
 
@@ -23,11 +24,11 @@ interface IStoriesSliderProps {
 
 const StoriesSlider: FC<IStoriesSliderProps> = ({ items }) => {
   return (
-    <Box display={'flex'} gap={1}>
+    <Stack direction={'row'} spacing={1}>
       {items.map((item) => (
         <StoriesItem item={item} key={item.id} />
       ))}
-    </Box>
+    </Stack>
   )
 }
 

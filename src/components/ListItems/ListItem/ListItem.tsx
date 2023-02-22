@@ -1,27 +1,22 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import {
   ListItemButton,
   ListItemIcon,
   ListItem as ListItemComponent,
   ListItemText,
-  SvgIconProps,
-  SvgIcon,
-  SxProps,
+  ListItemProps,
 } from '@mui/material'
 
-export interface IListItemProps {
-  icon: typeof SvgIcon
+export interface IListItemProps extends ListItemProps {
+  icon: ReactNode
   label?: string
-  iconProps?: SvgIconProps
   selected?: boolean
   onClick?: () => void
-  sx?: SxProps
 }
 
 const ListItem: FC<IListItemProps> = ({
-  icon: Icon,
+  icon,
   label,
-  iconProps,
   selected = false,
   onClick,
   ...rest
@@ -29,9 +24,7 @@ const ListItem: FC<IListItemProps> = ({
   return (
     <ListItemComponent disablePadding onClick={onClick} {...rest}>
       <ListItemButton selected={selected}>
-        <ListItemIcon>
-          <Icon {...iconProps} />
-        </ListItemIcon>
+        <ListItemIcon>{icon}</ListItemIcon>
         {label && <ListItemText primary={label} />}
       </ListItemButton>
     </ListItemComponent>

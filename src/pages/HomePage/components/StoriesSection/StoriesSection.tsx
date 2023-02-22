@@ -26,7 +26,11 @@ const StoriesSection: FC = () => {
 
   return (
     <Wrapper>
-      <SwitchButtons active={section} toggleReels={toggleReels} toggleStories={toggleStories} />
+      <SwitchButtons
+        active={section}
+        toggleReels={toggleReels}
+        toggleStories={toggleStories}
+      />
       <Stories />
     </Wrapper>
   )

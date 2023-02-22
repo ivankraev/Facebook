@@ -1,10 +1,12 @@
 import { FC } from 'react'
-import { Avatar, Box, IconButton, styled } from '@mui/material'
+import { Avatar, Box, styled } from '@mui/material'
 import {
-  AppsRounded as AppsICon,
+  AppsRounded as AppsIcon,
   MapsUgcRounded as MessagesIcon,
   Notifications as NotificationsIcon,
 } from '@mui/icons-material'
+
+import RoundedIconButton from '@/components/RoundedIconButton'
 
 const Wrapper = styled(Box)(({ theme }) => ({
   width: theme.spacing(45),
@@ -12,35 +14,15 @@ const Wrapper = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'flex-end',
   alignItems: 'center',
-  '.MuiButtonBase-root:not(:has(.MuiAvatar-root))': {
-    padding: theme.spacing(1.2),
-    backgroundColor: theme.palette.secondary.dark,
-  },
-  '.MuiSvgIcon-root': {
-    width: '22px',
-    height: '22px',
-  },
-  '.MuiAvatar-root': {
-    width: '40px',
-    height: '40px',
-  },
 }))
 
 const UserProfileNavigation: FC = () => {
   return (
     <Wrapper>
-      <IconButton>
-        <AppsICon />
-      </IconButton>
-      <IconButton>
-        <MessagesIcon />
-      </IconButton>
-      <IconButton>
-        <NotificationsIcon />
-      </IconButton>
-      <IconButton>
-        <Avatar src={'john-doe.jpg'} />
-      </IconButton>
+      <RoundedIconButton icon={<AppsIcon fontSize="small" />} />
+      <RoundedIconButton icon={<MessagesIcon fontSize="small" />} />
+      <RoundedIconButton icon={<NotificationsIcon fontSize="small" />} />
+      <RoundedIconButton icon={<Avatar src={'john-doe.jpg'} />} />
     </Wrapper>
   )
 }

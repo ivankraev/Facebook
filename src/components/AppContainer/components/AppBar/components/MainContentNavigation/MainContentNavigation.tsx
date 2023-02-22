@@ -1,41 +1,14 @@
 import { FC, useState } from 'react'
-import {
-  HomeOutlined as HomeIcon,
-  SlideshowOutlined as WatchIcon,
-  StorefrontOutlined as MarketplaceIcon,
-  GroupWorkOutlined as GroupsIcon,
-  VideogameAssetOutlined as GamesIcon,
-  Home as HomeIconSelected,
-  SmartDisplay as WatchIconSelected,
-  StorefrontRounded as MarketplaceIconSelected,
-  GroupWork as GroupIconSelected,
-  VideogameAsset as GamesIconSelected,
-} from '@mui/icons-material'
-import { Grid, styled, SvgIcon } from '@mui/material'
+import { Grid, styled } from '@mui/material'
 
 import SwitchButton from '@/components/SwitchButton'
-
-type NavItemValue = 'home' | 'watch' | 'marketplace' | 'groups' | 'games'
-
-interface NavItem {
-  value: NavItemValue
-  icon: typeof SvgIcon
-  selectedIcon: typeof SvgIcon
-}
-
-const items: NavItem[] = [
-  { value: 'home', icon: HomeIcon, selectedIcon: HomeIconSelected },
-  { value: 'watch', icon: WatchIcon, selectedIcon: WatchIconSelected },
-  { value: 'marketplace', icon: MarketplaceIcon, selectedIcon: MarketplaceIconSelected },
-  { value: 'groups', icon: GroupsIcon, selectedIcon: GroupIconSelected },
-  { value: 'games', icon: GamesIcon, selectedIcon: GamesIconSelected },
-]
+import { items, NavItem } from './config'
 
 const StyledGrid = styled(Grid)(({ theme }) => ({
-  width: theme.spacing(85),
-
-  '.Mui-selected, .Mui-selected:hover': {
-    '::after': {},
+  width: theme.spacing(70),
+  alignItems: 'center',
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
   },
 }))
 
@@ -58,7 +31,6 @@ const MainContentNavigation: FC = () => {
               icon={isSelected ? item.selectedIcon : item.icon}
               selected={isSelected}
               onClick={() => onSelect(item)}
-              iconProps={{ fontSize: 'large' }}
             />
           </Grid>
         )

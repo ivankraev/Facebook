@@ -7,7 +7,8 @@
       "location": "Brazil",
       "author": {
         "id": 1,
-        "name": "Ivan Kraev",
+        "name": "The G.O.A.T",
+        "isOnline": false,
         "profilePhotoSrc": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
       }
     },
@@ -19,6 +20,7 @@
       "author": {
         "id": 1,
         "name": "John Doe",
+        "isOnline": true,
         "profilePhotoSrc": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
       }
     },
@@ -30,6 +32,7 @@
       "author": {
         "id": 1,
         "name": "Crazy Dog",
+        "isOnline": false,
         "profilePhotoSrc": "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60"
       }
     },
@@ -40,7 +43,8 @@
       "location": "Alaska",
       "author": {
         "id": 1,
-        "name": "Fake Name",
+        "name": "Alpha Dog",
+        "isOnline": false,
         "profilePhotoSrc": "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60"
       }
     },
@@ -52,18 +56,68 @@
       "author": {
         "id": 1,
         "name": "Ryan Raynolds",
+        "isOnline": true,
         "profilePhotoSrc": "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=2000&q=60"
       }
     },
     {
-      "id": 5,
+      "id": 6,
       "src": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=2000&q=60",
       "createdAt": "2021/05/24",
       "location": "Alaska",
       "author": {
         "id": 1,
         "name": "Sarah Jessica Parker",
+        "isOnline": false,
         "profilePhotoSrc": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=2000&q=60"
+      }
+    },
+    {
+      "id": 7,
+      "src": "https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      "createdAt": "2021/05/24",
+      "location": "Alaska",
+      "author": {
+        "id": 1,
+        "name": "Tom Cruz",
+        "isOnline": false,
+        "profilePhotoSrc": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      }
+    },
+    {
+      "id": 8,
+      "src": "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "createdAt": "2021/05/24",
+      "location": "Alaska",
+      "author": {
+        "id": 1,
+        "name": "Hussain Bolt",
+        "isOnline": false,
+        "profilePhotoSrc": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      }
+    },
+    {
+      "id": 9,
+      "src": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "createdAt": "2021/05/24",
+      "location": "Alaska",
+      "author": {
+        "id": 1,
+        "name": "Jenifer Lopez",
+        "isOnline": true,
+        "profilePhotoSrc": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+      }
+    },
+    {
+      "id": 10,
+      "src": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "createdAt": "2021/05/24",
+      "location": "Alaska",
+      "author": {
+        "id": 1,
+        "name": "Christiano Ronaldo",
+        "isOnline": true,
+        "profilePhotoSrc": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
       }
     }
   ]

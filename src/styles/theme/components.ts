@@ -1,22 +1,23 @@
 import { ThemeOptions } from '@mui/material'
 
-const DRAWER_WIDTH = 360
-export const APPBAR_HEIGHT = 56
+const APPBAR_HEIGHT = 56
 
 export const components: ThemeOptions['components'] = {
   MuiContainer: {
     defaultProps: {
       disableGutters: true,
     },
+  },
+  MuiInputBase: {
     styleOverrides: {
+      input: {
+        fontWeight: 400,
+      },
       root: {
-        display: 'flex',
-        justifyContent: 'center',
-        paddingInline: 32,
+        borderRadius: 50,
       },
     },
   },
-
   MuiToolbar: {
     defaultProps: {
       disableGutters: true,
@@ -24,11 +25,9 @@ export const components: ThemeOptions['components'] = {
     styleOverrides: {
       dense: {
         height: APPBAR_HEIGHT,
-        minHeight: APPBAR_HEIGHT,
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingLeft: 12,
-        paddingRight: 16,
+        paddingInline: 16,
       },
     },
   },
@@ -36,18 +35,18 @@ export const components: ThemeOptions['components'] = {
   MuiDrawer: {
     styleOverrides: {
       root: {
-        width: DRAWER_WIDTH,
+        width: `clamp(280px, 24vw, 360px)`,
+        position: 'sticky',
       },
       paper: {
-        width: DRAWER_WIDTH,
-        height: `calc(100vh - ${APPBAR_HEIGHT}px)`,
-        position: 'fixed',
-        display: 'flex',
-        top: APPBAR_HEIGHT,
-        padding: '0.5rem',
+        width: `clamp(280px, 24vw, 360px)`,
+        height: `calc(100vh - ${APPBAR_HEIGHT + 1}px)`,
+        top: `${APPBAR_HEIGHT + 1}px`,
+        position: 'sticky',
+        padding: 8,
         boxSizing: 'border-box',
+        backgroundColor: 'initial',
         border: 'none',
-        backgroundColor: 'unset',
         overflowY: 'auto',
       },
     },
@@ -59,17 +58,25 @@ export const components: ThemeOptions['components'] = {
   },
   MuiAvatar: {
     styleOverrides: {
-      root: {
-        width: '36px',
-        height: '36px',
+      circular: {
+        width: 36,
+        height: 36,
       },
     },
   },
   MuiSvgIcon: {
     styleOverrides: {
-      root: {
-        width: '28px',
-        height: '28px',
+      fontSizeSmall: {
+        width: 21,
+        height: 21,
+      },
+      fontSizeMedium: {
+        width: 28,
+        height: 28,
+      },
+      fontSizeLarge: {
+        width: 36,
+        height: 36,
       },
     },
   },
@@ -77,23 +84,18 @@ export const components: ThemeOptions['components'] = {
     styleOverrides: {
       root: {
         '.MuiListItemText-root': {
-          flex: 'unset',
-          marginTop: '0.25rem',
-          marginLeft: '1rem',
-          paddingBlock: '0.25rem',
+          flex: 'initial',
+          marginLeft: 12,
         },
         '.MuiListItemButton-root': {
-          borderRadius: '8px',
-          padding: '0.5rem',
+          borderRadius: 8,
+          padding: 8,
           '&.Mui-selected, &.Mui-selected:hover': {
-            backgroundColor: 'unset',
+            backgroundColor: 'initial',
           },
         },
         '.MuiListItemIcon-root, .MuiListItemAvatar-root': {
-          minWidth: 'unset',
-        },
-        '.MuiListItemIcon-root': {
-          margin: 0,
+          minWidth: 'initial',
         },
       },
     },
